@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+	
+	<script src="js/HomeManagement.js" charset="utf-8" defer></script>
+	<script src="js/utils.js" charset="utf-8" defer></script>
+	<link rel="stylesheet" type="text/css" media="all" href="CSS/modal2.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="CSS/global.css" />
+	<title>Home page</title>
+</head>
+<body>
+	<div class="home-title">Welcome to your meetings page, <b><span id="userName">user</span></b></div>
+	<div class="header-buttons">
+                <a id="logout-button" class="btn btn-medium btn-inverted-purple" href="Logout">Log out</a>
+            </div>
+	
+	<div id="meetings-message">You have created 0 meetings :(</div>
+				<div id="meetings">
+				<div class="card card-blue">
+						<div class="card-title">title</div>
+						<div class="card-data">
+							<b>Start_date: </b>xxxx<br>
+							<b>End_date: </b>xxxxx;
+						</div>		
+						</div>
+				</div>
+	<div id="invitations-message">You have 0 meeting invitations :(</div>
+				<div id="invitations">
+				<div class="card card-blue-invitation">
+						<div class="card-title-invitation">title</div>
+						<div class="card-data-invitation">
+							<b>Start_date: </b>xxxx<br>
+							<b>End_date: </b>xxxxx;<br>
+							<b>us_creator:</b>xxxx;
+						</div>		
+						</div>
+				</div>
+				<p class="error" id="errorModal"></p>
+	<section class="modal hidden">
+  	<div class="flex">
+    <button class="btn-close">X</button>
+  	</div>
+  	<div>
+    <h3>Create a meeting</h3>
+    </div>
+    <form action="#" >
+    
+	<div id = "checkbox-message"></div>
+	<div id = "checkbox-user"></div>
+ 	<input type="text" id="title" name="title"  required/>
+ 	<p class="error" id="error"></p>
+  	<input class="btn" type="button" id="meetingbtn" value="submit">
+  	
+  	</form>
+	</section>
+	
+	
+	<div class="overlay hidden"></div>
+	<button class="btn btn-open">New Meeting</button>
+	
+		
+		
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset = "UTF-8">
+		<title> RegistrationPage </title>
+		<link rel="stylesheet" type="text/css" media="all" href="CSS/registration.css" />
+		<script src="js/utils.js" charset="utf-8" defer></script>
+		<script src="js/registration.js" charset="utf-8" defer></script>
+		
+	</head>
+
+	<body>
+		<h1>Registration Page</h1>
+		<p>Fill the fields below and submit to create a new account</p>
+    	
+		<form action="#" method="POST">
+		  <fieldset>
+		      	<p>UserName: <input type="text" id="username" name="username" required/></p>
+		      	<p>Email: <input type="email" id="email" name="email" required/></p>			
+        		<p>Password: <input type="password" id="password" name="password" required/></p>
+        		<p>Confirm password: <input type="password" id="passwordconfirm" name="passwordconfirm" required/></p>	
+        		<p><input id="registrationButton" type="button" value="submit" /></p>
+		  </fieldset>
+		  <p class="error" id="error"></p>
+		</form>
+	
+	<a href="Login.html">Login page</a>
+	</body>
+</html>
