@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"><head>
+<meta charset="ISO-8859-1">
+<title>meeting list</title>
+<link rel="stylesheet" type="text/css" media="all" href="../project_volpescu/CSS/home.css" />
+</head>
+<body>
+			<header class="headerrow">
+		<div class="titlecolumn">
+			<h1>Home Page</h1>
+			<h4>Welcome <span th:text="${session.currentUser.username} + ' !'">MarioRossi</span></h4>
+		</div>
+		<div class="buttoncolumn">
+			<a th:href="@{/Logout}">Logout</a>
+		</div>
+	</header>
+			<div class="meeting-title">Meetings created </div>
+			<div th:switch="${meetings.size}">
+				<div th:case="0">
+					<div class="no-meeting">You created 0 meetings.</div>
+				</div>
+				<div th:case="*" th:remove="all-but-first">
+					<div class="card card-blue" th:each="meeting : ${meetings}" >
+						<div> <b>Meeting title:</b><span th:text="${meeting.title}">meeting title</span></div>
+						<div class="card-data">
+							<div><b>start_date: </b><span th:text="${meeting.start}">00000</span></div>
+							<div><b>end_meeting: </b><span th:text="${meeting.end}">60</span>;</div>
+							<div><b>username creator: </b><span th:text="${meeting.uscreator}">60</span>;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="meeting-title">Meetings invitation </div>
+			<div th:switch="${invitations.size}">
+				<div th:case="0">
+					<div class="no-meeting">You have no invitation.</div>
+				</div>
+				<div th:case="*" th:remove="all-but-first">
+					<div class="card card-blue" th:each="invitation : ${invitations}" >
+						<div> <b>Meeting title:</b> <span th:text ="${invitation.title}">meeting title</span></div>
+						<div class="card-data">
+							<div><b>start_date: </b><span th:text="${invitation.start}">00000</span></div>
+							<div><b>end_meeting: </b><span th:text="${invitation.end}">60</span>;</div>
+							<div><b>username creator: </b><span th:text="${invitation.uscreator}">60</span>;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	<h1>Create a new meeting!</h1>
+	<form  method="POST" th:action="@{/GoToAnagraphic}">
+		<button  type="submit">Create</button>
+	</form>
+</body>
+</html>

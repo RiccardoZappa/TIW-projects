@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.error-title {
+  font-size: 36px;
+  margin-top: 50px;
+  color: red;
+}
+
+.error-reason {
+  font-size: 18px;
+  margin-top: 20px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+  font-size: 18px;
+  margin-top: 50px;
+  display: inline-block;
+}

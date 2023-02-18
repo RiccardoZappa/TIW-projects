@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+.error-title {
+  font-size: 24px;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.error-reason {
+  font-size: 18px;
+  color: red;
+  margin-bottom: 20px;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: lightgray;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

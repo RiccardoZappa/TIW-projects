@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.headerrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+.titlecolumn {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.buttoncolumn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 10px;
+}
+
+input[type="text"], button[type="submit"] {
+  padding: 10px;
+  margin: 10px;
+}
+
+.error-title {
+  text-align: center;
+  color: red;
+}
+
+.error-reason {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+button {
+  width: 20%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+a {
+  display: block;
+  margin-top: 5%;
+  margin-right: 5%;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}

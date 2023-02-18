@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"><head>
+<head>
+<meta charset="ISO-8859-1">
+<title>Anagraphic Page</title>
+<link rel="stylesheet" type="text/css" media="all" href="../project_volpescu/CSS/anagraphic.css" />
+</head>
+<body>
+
+		<header class="headerrow">
+		<div class="titlecolumn">
+			<h1>Anagraphic Page</h1>
+			<h4>Welcome <span th:text="${session.currentUser.username} + ' !'">MarioRossi</span></h4>
+		</div>
+		<div class="buttoncolumn">
+			<a th:href="@{/Logout}">Logout</a>
+		</div>
+	</header>
+		
+            <form method="POST"  th:action="CreateMeeting">
+            <ul>
+             <li th:each="user : ${AllUser}">
+   	 		<input type="checkbox" th:name="partecipants[]"  th:value="${user.username}" />
+    		<label th:text="${user.username}"></label>
+    		</li>
+    		</ul>
+               <input type ="text" placeholder="Enter the title" name="title" required>
+                 <button type="submit">Submit</button>
+              </form>
+               
+         <div class="error-title"></div>
+		<div class="error-reason">
+			 <b><span th:text="${error}">sample error</span></b>
+		</div>
+
+       
+</body>
+</html>
